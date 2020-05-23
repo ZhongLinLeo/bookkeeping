@@ -1,0 +1,22 @@
+@startuml
+
+title 记账流程图
+
+actor "user" as user
+participant "user_interface" as ui
+participant "bookkeeping_service" as service
+
+user->ui: 输入记账信息，\
+            \n 如记账类型，金额，时间，备注，类型，图片等信息
+
+ui->service: 通过post请求，将相关信息发送到服务器中
+
+service->service:
+
+
+
+
+
+
+
+@enduml
