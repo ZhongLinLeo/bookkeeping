@@ -1,4 +1,4 @@
-package cn.leo.bookkeeping.service;
+package cn.leo.bookkeeping;
 
 import org.junit.Test;
 

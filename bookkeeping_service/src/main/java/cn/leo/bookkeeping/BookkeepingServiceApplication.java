@@ -1,7 +1,8 @@
-package cn.leo.bookkeeping.service;
+package cn.leo.bookkeeping;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
@@ -9,8 +10,8 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  *
  * @author zl
  */
-@SpringBootApplication
 @EnableEurekaClient
+@SpringBootApplication(exclude = {JacksonAutoConfiguration.class})
 public class BookkeepingServiceApplication {
 
     public static void main(String[] args) {
@@ -18,3 +19,5 @@ public class BookkeepingServiceApplication {
     }
 
 }
+
+

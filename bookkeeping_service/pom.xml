@@ -5,8 +5,9 @@
     <parent>
         <groupId>cn.leo</groupId>
         <artifactId>bookkeeping</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0.0-SNAPSHOT</version>
     </parent>
+
     <artifactId>bookkeeping_service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>bookkeeping_service</name>
@@ -18,11 +19,14 @@
     </properties>
 
     <dependencies>
+
+        <!-- spring boot region start -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
 
+        <!-- test -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -39,6 +43,8 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+        <!-- spring boot region end -->
+
         <!-- 工具包 -->
         <dependency>
             <groupId>org.apache.commons</groupId>
@@ -49,13 +55,28 @@
             <artifactId>lombok</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+        </dependency>
+
+        <!-- spring cloud region start -->
+
         <!-- eureka  -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
 
+        <!-- spring cloud region end -->
+
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+
     </dependencies>
+
 
 
 </project>
