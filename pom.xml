@@ -19,11 +19,14 @@
         <module>bookkeeping_api</module>
         <module>bookkeeping_service</module>
         <module>bookkeeping_eureka</module>
+        <module>common</module>
+        <module>bookkeeping_user_service</module>
     </modules>
 
     <properties>
         <spring-cloud.version>Greenwich.SR5</spring-cloud.version>
         <nacos.version>2.1.2.RELEASE</nacos.version>
+        <common.version>1.0.0-SNAPSHOT</common.version>
     </properties>
 
     <dependencyManagement>
@@ -47,6 +50,12 @@
                 <version>${nacos.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <artifactId>common</artifactId>
+                <groupId>cn.leo</groupId>
+                <version>${common.version}</version>
             </dependency>
 
         </dependencies>

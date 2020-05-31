@@ -1,4 +1,4 @@
-package cn.leo.bookkeeping;
+package cn.leo.bookkeeping.user;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package cn.leo.bookkeeping.bean.entity;
+package cn.leo.bookkeeping.user.bean.entity;
 
 import lombok.Data;
 

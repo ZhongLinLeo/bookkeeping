@@ -1,4 +1,4 @@
-package cn.leo.bookkeeping.config;
+package cn.leo.bookkeeping.user.common.config;
 
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;

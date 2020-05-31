@@ -1,4 +1,4 @@
-package cn.leo.bookkeeping.controller;
+package cn.leo.bookkeeping.user.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RestController;
