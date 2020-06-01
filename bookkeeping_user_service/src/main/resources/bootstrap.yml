@@ -1,6 +1,6 @@
 spring:
   application:
-    name: bookkeeping
+    name: bookkeeping_user
   profiles:
     active: "@profileActive@"
 
