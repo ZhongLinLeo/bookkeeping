@@ -1,5 +1,6 @@
 package cn.leo.bookkeeping.user.common.enums;
 
+import cn.leo.bookkeeping.user.common.assertion.CommonExceptionAssert;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
@@ -8,7 +9,7 @@ import lombok.Getter;
  */
 @Getter
 @AllArgsConstructor
-public enum CommonResponseEnum implements ResponseCode {
+public enum CommonResponseEnum implements CommonExceptionAssert {
 
     /**
      * 处理成功

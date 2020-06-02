@@ -1,5 +1,6 @@
 package cn.leo.bookkeeping.user.common.enums;
 
+import cn.leo.bookkeeping.user.common.assertion.CallSystemExceptionAssert;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
@@ -10,18 +11,18 @@ import lombok.Getter;
  */
 @Getter
 @AllArgsConstructor
-public enum CallSystemResponseEnum implements ResponseCode {
+public enum CallSystemResponseEnum implements CallSystemExceptionAssert {
 
 
     /**
      * 参数无效
      */
-    CALL_SYSTEM_ERROR("A10000","调用方异常"),
+    CALL_SYSTEM_ERROR("A10000", "调用方异常"),
 
     /**
      * 参数无效
      */
-    PARAM_INVALID("A10001","参数无效"),
+    PARAM_INVALID("A10001", "参数无效"),
     ;
 
 
