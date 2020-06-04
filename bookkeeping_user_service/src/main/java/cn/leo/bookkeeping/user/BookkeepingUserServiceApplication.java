@@ -13,7 +13,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  */
 @EnableEurekaClient
 @SpringBootApplication(exclude = {JacksonAutoConfiguration.class})
-@MapperScan(basePackages = "cn.leo.bookkeeping.user.dao")
+@MapperScan(basePackages = "cn.leo.bookkeeping")
 public class BookkeepingUserServiceApplication {
 
     public static void main(String[] args) {

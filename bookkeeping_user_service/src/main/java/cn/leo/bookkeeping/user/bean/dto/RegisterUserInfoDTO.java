@@ -50,4 +50,18 @@ public class RegisterUserInfoDTO implements Serializable {
     @SerializedName("email")
     private String email;
 
+    /**
+     * 加密信息
+     */
+    @NotBlank(message = "encryption_info 不能为空")
+    @SerializedName("encryption_info")
+    private String encryptionInfo;
+
+    /**
+     * token
+     */
+    @NotBlank(message = "token 不能为空")
+    @SerializedName("token")
+    private String token;
+
 }

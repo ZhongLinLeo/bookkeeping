@@ -23,6 +23,11 @@ public enum CallSystemResponseEnum implements CallSystemExceptionAssert {
      * 参数无效
      */
     PARAM_INVALID("A10001", "参数无效"),
+
+    /**
+     * 该手机号码已经注册
+     */
+    USER_EXIST("A10002", "该手机号码已经注册"),
     ;
 
 
