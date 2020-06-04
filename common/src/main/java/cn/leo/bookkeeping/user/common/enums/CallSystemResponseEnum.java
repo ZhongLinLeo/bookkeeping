@@ -28,6 +28,11 @@ public enum CallSystemResponseEnum implements CallSystemExceptionAssert {
      * 该手机号码已经注册
      */
     USER_EXIST("A10002", "该手机号码已经注册"),
+
+    /**
+     * 该手机号码已经注册
+     */
+    PASSWORD_PARSE_ERROR("A10003", "密码解析失败"),
     ;
 
 

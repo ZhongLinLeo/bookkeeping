@@ -17,6 +17,11 @@ public enum  CurrentSystemResponseEnum implements CurrentSystemExceptionAssert {
      */
     SUCCESS("B10000","系统处理异常"),
 
+    /**
+     * 注册失败
+     */
+    REGISTER_FAILED("B10001", "注册失败"),
+
     ;
 
     /**
