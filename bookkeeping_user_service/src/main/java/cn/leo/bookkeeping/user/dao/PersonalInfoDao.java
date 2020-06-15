@@ -25,4 +25,14 @@ public interface PersonalInfoDao {
      */
     Boolean saveNewUser(PersonalInfo personalInfo);
 
+
+
+    /**
+     * 根据用户id查询用户信息
+     *
+     * @param userId 用户id
+     * @return 用户信息
+     */
+    PersonalInfo findPersonalInfoByUserId(@Param("userId") String userId);
+
 }

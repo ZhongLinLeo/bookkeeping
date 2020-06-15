@@ -89,6 +89,13 @@
         WHERE phone_number = #{phoneNumber}
           AND is_delete = 0;
     </select>
+    <select id="findPersonalInfoByUserId" resultType="cn.leo.bookkeeping.user.bean.entity.PersonalInfo">
+        SELECT user_id, user_name, phone_number, email, user_picture, user_signature
+        FROM personal_info
+        WHERE user_id = #{userId}
+          AND is_delete = 0;
+
+    </select>
 
 
 </mapper>

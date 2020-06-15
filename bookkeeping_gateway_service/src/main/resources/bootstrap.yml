@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: bookkeeping_gateway
+  profiles:
+    active: "@profileActive@"
+
+  cloud:
+    nacos:
+      config:
+        group: bk
+        file-extension: yaml

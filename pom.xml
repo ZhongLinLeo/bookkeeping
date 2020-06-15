@@ -21,6 +21,7 @@
         <module>bookkeeping_eureka</module>
         <module>common</module>
         <module>bookkeeping_user_service</module>
+        <module>bookkeeping_gateway_service</module>
     </modules>
 
     <properties>
