@@ -7,7 +7,7 @@
         <result column="record_type_id" jdbcType="BIGINT" property="recordTypeId"/>
         <result column="account_id" jdbcType="BIGINT" property="accountId"/>
         <result column="user_id" jdbcType="BIGINT" property="userId"/>
-        <result column="picture" jdbcType="VARCHAR" property="billPicture"/>
+        <result column="bill_picture" jdbcType="VARCHAR" property="billPicture"/>
         <result column="amount" jdbcType="BIGINT" property="amount"/>
         <result column="sort" jdbcType="VARCHAR" property="sort"/>
         <result column="consumption_time" jdbcType="TIMESTAMP" property="consumptionTime"/>
@@ -20,11 +20,82 @@
     </resultMap>
 
     <sql id="Base_Column_List">
-        id, record_type_id, account_id, user_id, picture, amount, sort, consumption_time,
+        id, record_type_id, account_id, user_id, bill_picture, amount, sort, consumption_time,
         borrower, lender, remark, delete_mark, create_time, update_time
     </sql>
 
     <insert id="saveBillInfo">
+        insert into bill_info
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="recordTypeId != null">
+                record_type_id,
+            </if>
+            <if test="accountId != null">
+                account_id,
+            </if>
+            <if test="userId != null">
+                user_id,
+            </if>
+            <if test="billPicture != null">
+                bill_picture,
+            </if>
+            <if test="amount != null">
+                amount,
+            </if>
+            <if test="sort != null">
+                sort,
+            </if>
+            <if test="consumptionTime != null">
+                consumption_time,
+            </if>
+            <if test="borrower != null">
+                borrower,
+            </if>
+            <if test="lender != null">
+                lender,
+            </if>
+            <if test="remark != null">
+                remark,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id},
+            </if>
+            <if test="recordTypeId != null">
+                #{recordTypeId},
+            </if>
+            <if test="accountId != null">
+                #{accountId},
+            </if>
+            <if test="userId != null">
+                #{userId},
+            </if>
+            <if test="billPicture != null">
+                #{billPicture},
+            </if>
+            <if test="amount != null">
+                #{amount},
+            </if>
+            <if test="sort != null">
+                #{sort},
+            </if>
+            <if test="consumptionTime != null">
+                #{consumptionTime},
+            </if>
+            <if test="borrower != null">
+                #{borrower},
+            </if>
+            <if test="lender != null">
+                #{lender},
+            </if>
+            <if test="remark != null">
+                #{remark},
+            </if>
+        </trim>
 
     </insert>
 
