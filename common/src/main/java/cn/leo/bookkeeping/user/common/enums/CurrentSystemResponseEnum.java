@@ -15,7 +15,7 @@ public enum  CurrentSystemResponseEnum implements CurrentSystemExceptionAssert {
     /**
      * 系统错误
      */
-    SUCCESS("B10000","系统处理异常"),
+    SYSTEM_ERROR("B10000","系统处理异常"),
 
     /**
      * 注册失败

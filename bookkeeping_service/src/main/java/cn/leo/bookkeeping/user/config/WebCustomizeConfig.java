@@ -31,7 +31,7 @@ public class WebCustomizeConfig implements WebMvcConfigurer {
     @Bean
     public Gson gson() {
         return new GsonBuilder()
-                .setDateFormat("yyyyMMddHHmmss")
+                .setDateFormat("yyyy-MM-dd HH:mm:ss")
                 .serializeNulls()
                 .setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
                 .create();

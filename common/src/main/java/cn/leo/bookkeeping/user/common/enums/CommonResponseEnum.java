@@ -17,9 +17,14 @@ public enum CommonResponseEnum implements CommonExceptionAssert {
     SUCCESS("0000","处理成功"),
 
     /**
-     *系统处理异常
+     * 系统处理异常
      */
     SYSTEM_ERROR("9999","系统处理异常"),
+
+    /**
+     * 接口超时
+     */
+    TIME_OUT("0001","接口超时"),
 
     ;
 

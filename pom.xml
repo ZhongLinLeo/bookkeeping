@@ -28,6 +28,7 @@
         <spring-cloud.version>Greenwich.SR5</spring-cloud.version>
         <nacos.version>2.1.2.RELEASE</nacos.version>
         <common.version>1.0.0-SNAPSHOT</common.version>
+        <api.version>1.0.0-SNAPSHOT</api.version>
         <mybatis.version>2.1.0</mybatis.version>
         <druid.version>1.1.10</druid.version>
         <mysql.version>5.1.28</mysql.version>
@@ -60,6 +61,12 @@
                 <artifactId>common</artifactId>
                 <groupId>cn.leo</groupId>
                 <version>${common.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.leo</groupId>
+                <artifactId>bookkeeping_api</artifactId>
+                <version>${api.version}</version>
             </dependency>
 
             <dependency>

@@ -17,6 +17,7 @@ package cn.leo.bookkeeping.user.common.util;
 
 
 import org.apache.commons.lang3.time.DateFormatUtils;
+import org.apache.commons.lang3.time.DateUtils;
 
 import java.text.ParseException;
 import java.util.Calendar;
@@ -27,7 +28,7 @@ import java.util.Date;
  *
  * @author yutianbao
  */
-public abstract class DateUtils extends org.apache.commons.lang3.time.DateUtils {
+public abstract class BaseDateUtils extends DateUtils {
     /**
      * Patterns
      */
@@ -35,7 +36,7 @@ public abstract class DateUtils extends org.apache.commons.lang3.time.DateUtils 
     public static final String DATETIME_PATTERN = "yyyy-MM-dd HH:mm:ss";
     public static final String DATETIME_MS_PATTERN = "yyyy-MM-dd HH:mm:ss.SSS";
 
-    public static final Date DEFAULT_DATE = DateUtils.parseByDayPattern("1970-01-01");
+    public static final Date DEFAULT_DATE = BaseDateUtils.parseByDayPattern("1970-01-01");
 
     /**
      * Parse date by 'yyyy-MM-dd' pattern

@@ -15,7 +15,7 @@
  */
 package cn.leo.bookkeeping.user.common.uid;
 
-import cn.leo.bookkeeping.user.common.util.DateUtils;
+import cn.leo.bookkeeping.user.common.util.BaseDateUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -118,7 +118,7 @@ public class DefaultUidGenerator implements UidGenerator, InitializingBean {
         long deltaSeconds = uid >>> (workerIdBits + sequenceBits);
 
         Date thatTime = new Date(TimeUnit.SECONDS.toMillis(epochSeconds + deltaSeconds));
-        String thatTimeStr = DateUtils.formatByDateTimePattern(thatTime);
+        String thatTimeStr = BaseDateUtils.formatByDateTimePattern(thatTime);
 
         // format as string
         return String.format("{\"UID\":\"%d\",\"timestamp\":\"%s\",\"workerId\":\"%d\",\"sequence\":\"%d\"}",
@@ -211,7 +211,7 @@ public class DefaultUidGenerator implements UidGenerator, InitializingBean {
     public void setEpochStr(String epochStr) {
         if (StringUtils.isNotBlank(epochStr)) {
             this.epochStr = epochStr;
-            this.epochSeconds = TimeUnit.MILLISECONDS.toSeconds(DateUtils.parseByDayPattern(epochStr).getTime());
+            this.epochSeconds = TimeUnit.MILLISECONDS.toSeconds(BaseDateUtils.parseByDayPattern(epochStr).getTime());
         }
     }
 }

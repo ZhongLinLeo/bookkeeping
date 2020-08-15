@@ -11,5 +11,22 @@
 
     <artifactId>bookkeeping_api</artifactId>
 
+    <dependencies>
+
+        <!-- common  -->
+        <dependency>
+            <groupId>cn.leo</groupId>
+            <artifactId>common</artifactId>
+        </dependency>
+
+        <!-- feign -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+
+
+    </dependencies>
+
 
 </project>
