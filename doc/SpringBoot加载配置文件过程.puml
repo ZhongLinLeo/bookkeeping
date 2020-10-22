@@ -1,0 +1,49 @@
+@startuml
+
+skinparam backgroundColor #grey
+
+title: Spring cloud eureka  client start activity
+
+(*) -> "SpringApplication.run()" as run
+
+run -> "SpringApplication.refreshContext()" as refreshContext
+
+refreshContext -> "SpringApplication.refresh()" as refresh
+
+refresh -> "AbstractApplicationContext.refresh()"  as Ab.refresh
+
+Ab.refresh -> "invokeBeanFactoryPostProcessors()" as invokeBeanFactoryPostProcessors
+
+invokeBeanFactoryPostProcessors --> "PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors()" as PR.invokeBeanFactoryPostProcessors
+
+PR.invokeBeanFactoryPostProcessors -left-> "registryProcessor.postProcessBeanDefinitionRegistry()" as postProcessBeanDefinitionRegistry
+
+postProcessBeanDefinitionRegistry -left-> "ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry()" as CC.postProcessBeanDefinitionRegistry
+
+CC.postProcessBeanDefinitionRegistry -down-> "processConfigBeanDefinitions()" as processConfigBeanDefinitions
+
+processConfigBeanDefinitions -> "ConfigurationClassParser.parse()" as parse
+
+parse -> "ConfigurationClassParser.process()" as process
+
+process -> "DeferredImportSelectorGroupingHandler.processGroupImports()" as processGroupImports
+
+processGroupImports -down-> "DeferredImportSelectorGrouping.getImports()"  as getImports
+
+getImports -left-> "DefaultDeferredImportSelectorGroup.process()" as DD.process
+
+DD.process -left-> "EnableDiscoveryClientImportSelector.selectImports()" as EDC.selectImports
+
+EDC.selectImports -left-> "SpringFactoryImportSelector.selectImports()" as selectImports
+
+selectImports -down-> "SpringFactoriesLoader.loadFactoryNames()" as loadFactoryNames
+
+loadFactoryNames -right-> "loadSpringFactories()"   as loadSpringFactories
+
+loadSpringFactories -right-> "PropertiesLoaderUtils.loadProperties()" as loadProperties
+
+loadProperties -right-> "...." as soon
+
+soon -right-> (*)
+
+@enduml

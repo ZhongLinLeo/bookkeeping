@@ -3,9 +3,3 @@ spring:
     name: bookkeeping_eureka
   profiles:
     active: "@profileActive@"
-
-  cloud:
-    nacos:
-      config:
-        group: bk
-        file-extension: yaml

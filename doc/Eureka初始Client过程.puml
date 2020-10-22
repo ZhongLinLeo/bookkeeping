@@ -1,0 +1,52 @@
+@startuml
+
+skinparam backgroundColor #grey
+
+title: Spring cloud eureka  client start activity
+
+(*) -> "SpringApplication.run()" as run
+
+run -> "SpringApplication.refreshContext()" as refreshContext
+
+refreshContext -> "SpringApplication.refresh()" as refresh
+
+refresh -> "AbstractApplicationContext.refresh()"  as Ab.refresh
+
+Ab.refresh -> "AbstractApplicationContext.finishRefresh()"  as finishRefresh
+
+finishRefresh -down-> "LifecycleProcessor.onRefresh()" as onRefresh
+
+onRefresh -left-> "startBeans()" as startBeans
+
+startBeans -left-> "start()" as startMethod
+
+startMethod -left-> "doStart()" as doStart
+
+doStart -left-> "EurekaAutoServiceRegistration.start()" as eureka.Start
+
+eureka.Start -left-> "EurekaServiceRegistry.register()" as register
+
+register -left-> "maybeInitializeClient()" as maybeInitializeClient
+
+maybeInitializeClient -down-> "EurekaRegistration.getEurekaClient()" as getEurekaClient
+
+getEurekaClient -> "getTargetObject()" as getTargetObject
+
+getTargetObject -> "EurekaClientAutoConfiguration.RefreshableEurekaClientConfiguration.eurekaClient()" as eurekaClient
+
+eurekaClient -> "CloudEurekaClient.init()" as init
+
+init -> "DiscoveryClient.init()" as DiscoveryClient.init
+
+DiscoveryClient.init -down->  "....." as etc.
+
+etc. -left-> (*)
+
+
+
+
+
+
+
+
+@enduml

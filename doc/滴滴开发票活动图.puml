@@ -1,0 +1,33 @@
+@startuml
+
+|#99CCCC|用户|
+
+start
+
+repeat
+    :选择地址;
+    :下单;
+
+|#808080|平台|
+    :记录订单信息;
+    repeat while (位置不合理);
+    fork
+
+|#lightblue|商家|
+    :通知商家客户下单;
+    :商家下厨;
+|#99CCFF|外卖小哥|
+    fork again
+    :分配外卖小哥;
+
+|#lightblue|商家|
+    :取餐;
+
+    end fork
+    -[dashed]->
+    :外卖成品]
+|#99CCCC|用户|
+
+    :送货上门;
+    stop;
+@enduml

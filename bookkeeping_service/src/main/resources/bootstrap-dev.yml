@@ -1,5 +1,5 @@
 server:
-  address: 10010
+  port: 20010
 
 spring:
   datasource:
@@ -29,3 +29,8 @@ mybatis:
   type-aliases-package: cn.leo.bookkeeping.user.bean.entity
   # 驼峰命名规范 如：数据库字段是  order_id 那么 实体字段就要写成 orderId
   configuration.map-underscore-to-camel-case: true
+
+eureka:
+  client:
+    service-url:
+      defaultzone:  http://localhost:10010/eureka/

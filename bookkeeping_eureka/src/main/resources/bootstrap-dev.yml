@@ -1,6 +1,16 @@
-spring:
-  cloud:
-    nacos:
-      config:
-        server-addr: 47.102.113.56:8848
-        namespace: ec496fbe-5043-4450-b22c-fc5f99ad9ded
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: localhost
+
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultzone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+  server:
+    wait-time-in-ms-when-sync-empty: 0
+    enable-self-preservation: false
