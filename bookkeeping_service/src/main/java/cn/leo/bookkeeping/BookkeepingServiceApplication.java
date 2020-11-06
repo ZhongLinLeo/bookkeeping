@@ -15,7 +15,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @SpringBootApplication(scanBasePackages = "cn.leo.bookkeeping",exclude = {JacksonAutoConfiguration.class})
 @EnableDiscoveryClient
 @EnableFeignClients("cn.leo.bookkeeping.api")
-@MapperScan(basePackages = {"cn.leo.bookkeeping"})
+@MapperScan(basePackages = {"cn.leo.bookkeeping.dao"})
 public class BookkeepingServiceApplication {
 
     public static void main(String[] args) {

@@ -4,16 +4,16 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
  * bookkeeping 用户服务启动类
  *
  * @author zl
  */
-@EnableEurekaClient
-@SpringBootApplication(exclude = {JacksonAutoConfiguration.class})
-@MapperScan(basePackages = "cn.leo.bookkeeping")
+@SpringBootApplication(scanBasePackages = "cn.leo.bookkeeping",exclude = {JacksonAutoConfiguration.class})
+@EnableFeignClients("cn.leo.bookkeeping.api")
+@MapperScan(basePackages = "cn.leo.bookkeeping.user.dao")
 public class BookkeepingUserServiceApplication {
 
     public static void main(String[] args) {

@@ -61,13 +61,12 @@
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
 
-        <!-- spring cloud region end -->
-
         <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+            <groupId>cn.leo</groupId>
+            <artifactId>bookkeeping_api</artifactId>
         </dependency>
 
+        <!-- spring cloud region end -->
 
         <dependency>
             <artifactId>common</artifactId>

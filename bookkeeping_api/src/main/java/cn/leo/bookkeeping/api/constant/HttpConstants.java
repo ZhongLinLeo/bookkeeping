@@ -5,9 +5,12 @@ package cn.leo.bookkeeping.api.constant;
  */
 public final class HttpConstants {
 
+    private HttpConstants() {
+    }
+
     /**
      * service name
      */
-    public final static String SERVICE_NAME = "BookkeepingService";
+    public  static final String SERVICE_NAME = "BookkeepingService";
 
 }
