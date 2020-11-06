@@ -1,18 +1,18 @@
 package cn.leo.bookkeeping.user.service.impl;
 
+import cn.leo.bookkeeping.uid.UidGenerator;
 import cn.leo.bookkeeping.user.bean.dto.RegisterUserInfoDTO;
 import cn.leo.bookkeeping.user.bean.entity.PersonalInfo;
-import cn.leo.bookkeeping.user.common.uid.UidGenerator;
-import cn.leo.bookkeeping.user.common.util.EncryptUtils;
 import cn.leo.bookkeeping.user.dao.PersonalInfoDao;
 import cn.leo.bookkeeping.user.service.UserRegisterService;
+import cn.leo.bookkeeping.util.EncryptUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 
-import static cn.leo.bookkeeping.user.common.enums.CallSystemResponseEnum.PASSWORD_PARSE_ERROR;
+import static cn.leo.bookkeeping.enums.CallSystemResponseEnum.PASSWORD_PARSE_ERROR;
 
 /**
  * @author leo.zl on 2020/6/2

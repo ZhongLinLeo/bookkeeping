@@ -1,8 +1,8 @@
 package cn.leo.bookkeeping.user.controller;
 
+import cn.leo.bookkeeping.enums.CommonResponseEnum;
+import cn.leo.bookkeeping.response.Result;
 import cn.leo.bookkeeping.user.bean.dto.RegisterUserInfoDTO;
-import cn.leo.bookkeeping.user.common.enums.CommonResponseEnum;
-import cn.leo.bookkeeping.user.common.response.Result;
 import cn.leo.bookkeeping.user.constant.UserMappingConstants;
 import cn.leo.bookkeeping.user.service.UserRegisterService;
 import lombok.extern.slf4j.Slf4j;
@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 
-import static cn.leo.bookkeeping.user.common.enums.CallSystemResponseEnum.USER_EXIST;
-import static cn.leo.bookkeeping.user.common.enums.CurrentSystemResponseEnum.REGISTER_FAILED;
+import static cn.leo.bookkeeping.enums.CallSystemResponseEnum.USER_EXIST;
+import static cn.leo.bookkeeping.enums.CurrentSystemResponseEnum.REGISTER_FAILED;
 
 /**
  * 用户注册控制层

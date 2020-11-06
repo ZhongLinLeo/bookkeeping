@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="cn.leo.bookkeeping.user.dao.BillInfoDAO">
-    <resultMap id="BaseResultMap" type="cn.leo.bookkeeping.user.bean.entity.BillInfo">
+<mapper namespace="cn.leo.bookkeeping.dao.BillInfoDAO">
+    <resultMap id="BaseResultMap" type="cn.leo.bookkeeping.bean.entity.BillInfo">
         <result column="id" jdbcType="BIGINT" property="id"/>
         <result column="record_type_id" jdbcType="BIGINT" property="recordTypeId"/>
         <result column="account_id" jdbcType="BIGINT" property="accountId"/>
