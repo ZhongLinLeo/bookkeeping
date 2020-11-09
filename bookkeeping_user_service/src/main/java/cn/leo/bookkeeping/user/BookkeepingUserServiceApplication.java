@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
- * bookkeeping 用户服务启动类
+ * bookkeeping 用户服务 启动类
  *
  * @author zl
  */
