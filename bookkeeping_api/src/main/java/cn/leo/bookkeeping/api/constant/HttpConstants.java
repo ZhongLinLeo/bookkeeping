@@ -9,8 +9,13 @@ public final class HttpConstants {
     }
 
     /**
-     * service name
+     * bookkeepingService
      */
-    public  static final String SERVICE_NAME = "BookkeepingService";
+    public  static final String BOOKKEEPING_SERVICE = "bookkeepingService";
+
+    /**
+     * bookkeepingUserService
+     */
+    public  static final String BOOKKEEPING_USER_SERVICE = "bookkeepingUserService";
 
 }

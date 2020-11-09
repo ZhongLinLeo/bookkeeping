@@ -1,5 +1,5 @@
 spring:
   application:
-    name: bookkeeping_user
+    name: bookkeepingUserService
   profiles:
     active: "@profileActive@"

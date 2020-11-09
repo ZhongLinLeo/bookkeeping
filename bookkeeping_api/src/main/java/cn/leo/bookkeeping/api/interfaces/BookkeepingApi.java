@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  *
  * @author create by leo.zl on 2020/8/13
  */
-@FeignClient(name = HttpConstants.SERVICE_NAME, fallbackFactory = BookkeepingApiFallbackFactory.class)
+@FeignClient(name = HttpConstants.BOOKKEEPING_SERVICE, fallbackFactory = BookkeepingApiFallbackFactory.class)
 public interface BookkeepingApi {
 
     /**
