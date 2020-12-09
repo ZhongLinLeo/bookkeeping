@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>登陆界面</title>
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <link rel="icon" href="../static/images/favicon.ico" type="image/ico"/>
+    <link rel="stylesheet" href="../static/sdk.css"/>
+
+    <link href="../static/css/custom.css" rel="stylesheet">
+    <style>
+        html,
+        body,
+        .app-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <script src="../static/sdk.js"></script>
+</head>
+
+<body>
+
+<div id="login" class="login_content"></div>
+
+<script src="../static/sdk.js"></script>
+<script type="text/javascript">
+    (function () {
+        // 通过替换下面这个配置来生成不同页面
+        amisRequire('amis/embed').embed('#login', {
+            type: "page",
+            body: [
+                {
+                    type: "grid",
+                    columns: [
+                        {
+                            type: 'service',
+                            body: "",
+                            md: 5,
+                        }, {
+                            title: "",
+                            type: 'form',
+                            submitText:"",
+                            md: 2,
+                            controls: [
+                                {
+                                    // label: '用户名',
+                                    type: 'text',
+                                    size: "md",
+                                    placeholder: "用户名",
+                                    name: 'user_name'
+                                },
+                                {
+                                    // label: '密码',
+                                    type: 'text',
+                                    size: "md",
+                                    placeholder: "密码",
+                                    name: 'user_password'
+                                },
+                                {
+                                    type: "button-toolbar",
+                                    buttons: [
+                                        {
+                                            type: "submit",
+                                            // api:"",
+                                            label: "登 陆",
+
+                                            level: "success"
+                                        },
+                                        {
+                                            type: "button",
+                                            label: "找回密码",
+                                            level: "light"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        });
+    })();
+</script>
+
+
+</body>
+</html>

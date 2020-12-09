@@ -1,10 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="UTF-8"/>
+    <title>amis demo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <link rel="icon" href="../static/images/favicon.ico" type="image/ico"/>
+    <link rel="stylesheet" href="../static/sdk.css"/>
+    <style>
+        html,
+        body,
+        .app-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
 </head>
+
+
 <body>
 
+<div id="root" class="app-wrapper"></div>
+<script src="../static/sdk.js"></script>
+<script type="text/javascript">
+    (function () {
+        let amis = amisRequire('amis/embed');
+        // 通过替换下面这个配置来生成不同页面
+        amis.embed('#root', {
+            "type": "page",
+            "title": "just do it",
+            "body": [
+                {
+                    "type": "tpl",
+                    "tpl": "初始页面",
+                    "inline": false
+                }
+            ],
+            "aside": [
+                {
+                    "type": "grid",
+                    "columns": [
+                        {
+                            "type": "button-group",
+                            "buttons": [
+                                {
+                                    "type": "button",
+                                    "label": "记账",
+                                    "actionType": "url",
+                                    "dialog": {
+                                        "title": "系统提示",
+                                        "body": "对你点击了"
+                                    },
+                                    "size": "lg",
+                                    "icon": "fa fa-snapchat",
+                                    "level": "light",
+                                    "block": true,
+                                    "className": "p p-t p-r p-b p-l text-info text-lg r-3x m m-t m-r m-b m-l b-a b-3x w-full",
+                                    "blank": false,
+                                    "iconClassName": "pull-left"
+                                }
+                            ]
+                        }
+                    ],
+                    "className": "p-none m-none w-full"
+                }
+            ]
+
+        });
+    })();
+</script>
 </body>
 </html>
