@@ -1,0 +1,37 @@
+@startuml
+
+
+skinparam backgroundColor #grey
+
+title: condition invoke trace
+
+(*) -> "run()"  as run
+
+run -> "refreshContext()" as refreshContext
+
+refreshContext -> "refresh()" as refresh
+
+refresh -> "AbstractApplicationContext.refresh()" as abRefresh
+
+abRefresh -> "invokeBeanFactoryPostProcessors()" as invokeBeanFactoryPostProcessors
+
+invokeBeanFactoryPostProcessors --> "PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors()" as pprd
+
+pprd -left-> "invokeBeanDefinitionRegistryPostProcessors()" as invokeBeanDefinitionRegistryPostProcessors
+
+invokeBeanDefinitionRegistryPostProcessors -left-> "ConfigurationClassPostProcessor.postProcessBeanFactory()" as postProcessBeanFactory
+
+postProcessBeanFactory  --> "processConfigBeanDefinitions()" as processConfigBeanDefinitions
+
+processConfigBeanDefinitions -> "ConfigurationClassParser.parse()" as parse
+
+parse -> "processConfigurationClass()" as processConfigurationClass
+
+processConfigurationClass -> "ConditionEvaluator.shouldSkip()" as shouldSkip
+
+shouldSkip -> (*)
+
+
+
+
+@enduml

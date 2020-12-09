@@ -1,0 +1,34 @@
+@startuml
+
+skinparam backgroundColor #grey
+
+title: loadbalancer choose server
+
+(*) -> "SynchronousMethodHandler.invoke()" as invoke
+
+invoke -> "SynchronousMethodHandler.executeAndDecode()" as executeAndDecode
+
+executeAndDecode -> "LoadBalancerFeignClient.execute()" as execute
+
+execute --> "FeignLoadBalancer.executeWithLoadBalancer()" as executeWithLoadBalancer
+
+executeWithLoadBalancer -left-> "LoadBalancerCommand.submit()" as submit
+
+submit -left-> "LoadBalancerCommand.selectServer()" as selectServer
+
+selectServer --> "LoadBalancerContext.getServerFromLoadBalancer" as getServerFromLoadBalancer
+
+getServerFromLoadBalancer -> "ILoadBalancer.chooseServer()" as IChooseServer
+
+IChooseServer -> "ZoneAwareLoadBalancer.chooseServer()" as ZChooseServer
+
+ZChooseServer --> "BaseLoadBalancer..chooseServer()" as BChooseServer
+
+BChooseServer -left-> "IRule.choose()" as choose
+
+choose -left-> (*)
+
+
+
+
+@enduml

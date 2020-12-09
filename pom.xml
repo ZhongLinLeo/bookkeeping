@@ -22,6 +22,7 @@
         <module>common</module>
         <module>bookkeeping_user_service</module>
         <module>bookkeeping_gateway_service</module>
+        <module>bookkeeping-web</module>
     </modules>
 
     <properties>
